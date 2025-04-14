@@ -8,6 +8,14 @@ const nextConfig = {
   trailingSlash: false,
   // Ensure assets are properly prefixed with basePath
   assetPrefix: '/simple-calculation',
+  // Ensure CSS is properly processed
+  webpack: (config) => {
+    return config;
+  },
+  // Add custom environment variables here (but not NODE_ENV)
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/simple-calculation',
+  },
 };
 
 export default nextConfig;
