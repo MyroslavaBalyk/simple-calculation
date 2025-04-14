@@ -50,8 +50,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      - name: Update Next.js config for static export
+        run: |
+          echo "/** @type {import('next').NextConfig} */" > next.config.mjs
+          echo "const nextConfig = {" >> next.config.mjs
+          echo "  output: 'export'," >> next.config.mjs
+          echo "  images: { unoptimized: true }," >> next.config.mjs
+          echo "  basePath: process.env.NODE_ENV === 'production' ? '/simple-calculation' : ''," >> next.config.mjs
+          echo "};" >> next.config.mjs
+          echo "" >> next.config.mjs
+          echo "export default nextConfig;" >> next.config.mjs
+          cat next.config.mjs
+        
       - name: Build
         run: npm run build
+        
+      - name: List directories
+        run: ls -la
         
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
