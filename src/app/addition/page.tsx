@@ -9,8 +9,8 @@ export default function Page() {
     // Generate random numbers for addition
     const generateRandomNumbers = () => {
         // Generate two random numbers between 1 and 50
-        const newFirstNumber = Math.floor(Math.random() * 20) + 1;
-        const newSecondNumber = Math.floor(Math.random() * 20) + 1;
+        const newFirstNumber = Math.floor(Math.random() * 999) + 1;
+        const newSecondNumber = Math.floor(Math.random() * 999) + 1;
         
         setFirstNumber(newFirstNumber);
         setSecondNumber(newSecondNumber);
