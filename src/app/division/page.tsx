@@ -12,7 +12,7 @@ export default function Page() {
         const newDivisor = Math.floor(Math.random() * 9) + 1;
         
         // Generate a random multiplier (1-10) to ensure clean division
-        const multiplier = Math.floor(Math.random() * 100) + 1;
+        const multiplier = Math.floor(Math.random() * 1000) + 1;
         
         // Calculate dividend to ensure it's evenly divisible
         const newDividend = newDivisor * multiplier;
