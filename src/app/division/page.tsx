@@ -9,7 +9,7 @@ export default function Page() {
     // Generate random numbers for division
     const generateRandomNumbers = () => {
         // Generate divisor first (1-10)
-        const newDivisor = Math.floor(Math.random() * 20) + 1;
+        const newDivisor = Math.floor(Math.random() * 9) + 1;
         
         // Generate a random multiplier (1-10) to ensure clean division
         const multiplier = Math.floor(Math.random() * 10) + 1;
