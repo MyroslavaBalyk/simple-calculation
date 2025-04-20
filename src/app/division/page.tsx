@@ -44,6 +44,7 @@ export default function Page() {
             alert('Incorrect. Try again!');
             if (userAnswerRef.current) {
                 userAnswerRef.current.value = '';
+                userAnswerRef.current.focus();
             }
         }
     };
